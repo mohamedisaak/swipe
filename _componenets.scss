@@ -1,0 +1,49 @@
+h1 {
+  @include headingStyles(600,$h1-size,-1px);
+  line-height: $h1-line-height;
+}
+h2 {
+  @include headingStyles(500,$h2-size,-0.25px);
+  line-height: $h2-line-height;
+}
+h3 {
+  @include headingStyles(500,$h3-size,0);
+}
+h4 {
+  @include headingStyles(500,$h4-size,0.25px);
+}
+h5 {
+  @include headingStyles(500,$h5-size,0);
+}
+h6 {
+  @include headingStyles(500,$h6-size,0);
+}
+
+a {
+  @include linkStyles;
+}
+p {
+  @include paragraphStyles;
+}
+.subtitle {
+  @include subtitleStyles($color-blue-1);
+}
+.secondary-text {
+  @include secondaryParagraphStyles;
+}
+.primary-btn {
+  @extend %btn;
+  @include buttonStyles($color-accent, $color-text-light);
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+}
+.secondary-btn {
+  @extend %btn;
+  @include buttonStyles(transparent,$color-accent);
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
